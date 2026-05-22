@@ -28,8 +28,8 @@ app.use(cors({
 
 if (process.env.NODE_ENV === 'production') {
   const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 100,
+    windowMs: 5 * 60 * 1000,
+    max: 200,
     message: { message: 'Too many requests. Please try again later.' },
   });
   app.use(limiter);
